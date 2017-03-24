@@ -1,0 +1,438 @@
+/* --------- MESH FONTS --------- */
+@font-face {
+    font-family: meshFontThin;
+    src: url(../fonts/roboto/Roboto-Thin.woff);
+}
+@font-face {
+    font-family: meshFontLight;
+    src: url(../fonts/roboto/Roboto-Light.woff);
+}
+@font-face {
+    font-family: meshFontRegular;
+    src: url(../fonts/roboto/Roboto-Regular.woff);
+}
+@font-face {
+    font-family: meshFontMedium;
+    src: url(../fonts/roboto/Roboto-Medium.woff);
+}
+@font-face {
+    font-family: meshFontBold;
+    src: url(../fonts/roboto/Roboto-Bold.woff);
+}
+
+/* --------- GLOBAL STYLE CHOICES ---------- */
+body {
+	font-family: meshFontRegular;
+	height: 100%; 
+	width: 100%; 
+	position: absolute;
+	margin: 0;
+}
+
+/* --------- NAV BAR --------- */
+nav {
+	font-family: meshFontRegular;
+    color: #525252;
+    background-color: #FFFFFF;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.16), 0 0px 0px 0 rgba(0,0,0,0.12);
+}
+@media only screen and (max-width: 993px) {
+    nav {
+        display: none;
+    }
+}
+.nav-wrapper {
+	margin-left: 35px;
+	margin-right: 25px;
+	margin-top: 5px;
+}
+nav img {
+	margin-right: 10px;
+	transform: translateY(10px);
+	height: 40px;
+}
+nav .brand-logo {
+	font-size: 25px;
+	color: #525252;
+}
+nav ul li {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+nav ul a {
+	font-family: meshFontLight;
+	color: #525252;
+	text-transform: uppercase;
+}
+nav ul a:hover {
+	color: #FB6253;
+	background-color: #FFFFFF;
+}
+@media only screen and (min-width: 993px) {
+    .slide-out {
+        display: none;
+    }
+}
+.slide-out {
+	padding: 10px;
+}
+.slide-out a {
+	padding-left: 10px;
+    color: #FB6253;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.side-nav a {
+	color: #525252;
+    text-align: center;
+    font-family: meshFontLight;
+    text-transform: uppercase;
+}
+.side-nav a:hover {
+	color: #FB6253;
+	transition: all 0.2s;
+}
+.material-icons {
+    font-size: 35px;
+}
+.side-nav {
+    width: 250px;
+}
+
+/* --------- SECTION ONE --------- */
+.main-jumbotron {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+@media only screen and (max-width: 993px) {
+    .main-jumbotron {
+        height: 93%;
+    }
+}
+.focal-point {
+	display: block;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+.center-logo {
+	text-align: center;
+}
+.focal-img {
+	display: inline-block;
+}
+.focal-text {
+	display: inline-block;
+	line-height: 150px;
+	vertical-align: top;
+	font-size: 30px;
+	color: #525252;
+	margin-left: 20px;
+}
+.focal-point img {
+	height: 150px;
+}
+.focal-text span {
+	font-family: meshFontMedium;
+}
+.focal-slogan {
+	margin-top: 40px;
+}
+.focal-slogan h4 {
+	text-align: center;
+	font-size: 37px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #525252;
+}
+.focal-slogan p {
+	font-family: meshFontLight;
+	text-align: center;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #525252;
+}
+.down-arrow {
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* --------- BOUNCE EFFECT ON DOWN ARROW --------- */
+.arrow {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  margin-top: 50px;
+  width: 33px;
+  height: 34px;
+  cursor: pointer;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.arrow img {
+	height: 30px;
+}
+
+/* --------- SECTION TWO --------- */
+.section-two {
+	display: block;
+	position: relative;
+	margin: auto;
+	width: 100%;
+	background-color: #FFFFFF;
+	padding: 20px;
+	max-width: 1000px;
+	font-family: meshFontLight;
+	color: #525252;
+}
+.section-two .categories {
+	margin-top: 15px;
+}
+/* Change this when flex comes */
+.section-two .categories .category {
+	padding: 10px;
+	padding-bottom: 15px;
+	opacity: .7;
+	cursor: pointer;
+	transition: all .5s;
+	transform: scale(.6);
+}
+@media only screen and (max-width: 600px) {
+    .section-two .categories {
+        display: flex;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .section-two .categories div {
+        flex: 1 1 0;
+        text-align: center;
+    }
+}
+.section-two .categories .category:hover,
+    .section-two .categories .category.active {
+        transform: scale(.8);
+        opacity: 1;
+        cursor: pointer;
+    }
+.section-two hr {
+    border: none;
+    height: 3px;
+    width: 80px;
+    color: #F38C00; /* old IE */
+    background-color: #F38C00; /* Modern Browsers */
+}
+.section-two img {
+	display: block;
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%; 
+	position: relative;
+}
+
+/* WORKING ON THIS */
+.active-img {
+	margin-left: 50;
+	animation: slideIn .3s;
+	-webkit-animation: slideIn .3s;
+}
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		margin-left: 50px;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0px;
+	}
+}
+
+.section-two .learn-more-link a {
+	text-transform: uppercase;
+	color: #F38C00;
+}
+@media only screen and (max-width: 600px) {
+    .section-two-description {
+    	margin-top: 15px;
+        margin-bottom: 35px;
+        padding-left: 10.5px;
+    }
+}
+.section-two .fa-angle-right {
+	/*color: #F38C00;*/
+	font-size: 24px;
+	padding-left: 15px;
+	transform: translateY(2px);
+}
+.learn-more-link a:hover .fa-angle-right {
+    margin-left: 7px;
+    transition: all 0.5s;
+}
+.learn-more-link a:not(:hover) .fa-angle-right {
+    margin-left: -7px;
+    transition: all 0.5s;
+}
+
+/* Prevents Mobile Safari from bumping up font sizes in landscape */
+@media only screen and (max-device-width: 480px) {
+	body {
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
+}
+
+/* --------- SECTION THREE --------- */
+.section-three {
+	display: flex;
+	font-family: meshFontLight;
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+}
+.section-three hr {
+    border: none;
+    height: 3px;
+    width: 80px;
+    color: #0085CC; /* old IE */
+    background-color: #0085CC; /* Modern Browsers */
+}
+.section-three .fa-angle-right {
+	color: #0085CC;
+	font-size: 24px;
+	padding-left: 15px;
+	transform: translateY(2px);
+}
+.section-three .learn-more-link a {
+	text-transform: uppercase;
+	color: #0085CC;
+}
+.section-three img {
+	display: block;
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%; 
+}
+
+/* --------- NEXT PAGE NAVIGATION SECTION --------- */
+.next-page-background {
+	background-color: #F7F7F7;
+	padding-bottom: 40px;
+	padding-top: 30px;
+	margin-top: 40px;
+	margin-bottom: -12px;
+	width: 100%;
+	overflow: hidden;
+}
+.next-page-section {
+	width: 300px;
+	float: right;
+	margin-right: 50px;
+}
+@media only screen and (max-width: 600px) {
+    .next-page-section {
+    	margin: auto;
+    	display: block;
+    	width: 100%;
+    	text-align: center;
+    }
+}
+.next-page-section a {
+	font-family: meshFontRegular;
+	color: #525252;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.next-page-section .fa-angle-right {
+	transform: translateY(4px);
+	font-size: 52px;
+	color: #525252;
+	padding-left: 15px;
+}
+.next-page-section hr {
+    border: none;
+    height: 2px;
+    width: 80px;
+    color: #525252; /* old IE */
+    background-color: #525252; /* Modern Browsers */
+}
+.next-page-section a:hover .fa-angle-right {
+    margin-left: 7px;
+    transition: all 0.5s;
+}
+.next-page-section a:not(:hover) .fa-angle-right {
+    margin-left: -7px;
+    transition: all 0.5s;
+}
+
+/* --------- FOOTER --------- */
+.footer {
+	color: #525252;
+}
+.footer img {
+	width: 100%;
+	height: 5px;
+}
+.footer-content-container {
+	font-family: meshFontMedium;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1100px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.footer-content-container div {
+	margin-top: 20px;
+}
+.footer-content-container li {
+	font-family: meshFontLight;
+}
+.footer h6 {
+	font-size: 18px;
+}
+.footer a {
+	color: #525252;
+}
+.footer a:hover {
+	text-decoration: underline;
+}
+.copyright-section {
+	font-family: meshFontLight;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1100px;
+	padding-left: 23px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.copyright-background {
+	background-color: #F7F7F7;
+}
+
+
+
+
+
