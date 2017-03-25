@@ -29,6 +29,22 @@ body {
 	margin: 0;
 }
 
+/* --------- MISC ---------- */
+.mobile-divider hr {
+	margin: auto;
+    width: 80%;
+    border: none;
+    height: 1px;
+    color: #D8D8D8; /* old IE */
+    background-color: #D8D8D8; /* Modern Browsers */
+   	margin-top: 15px;
+}
+@media only screen and (min-width: 600px) {
+    .mobile-divider hr {
+        display: none;
+    }
+}
+
 /* --------- NAV BAR --------- */
 nav {
 	font-family: meshFontRegular;
@@ -105,6 +121,11 @@ nav ul a:hover {
     height: 90%;
     width: 100%;
 }
+@media only screen and (min-width: 1100px) {
+    .main-jumbotron {
+        height: 100%;
+    }
+}
 @media only screen and (max-width: 993px) {
     .main-jumbotron {
         height: 93%;
@@ -116,6 +137,11 @@ nav ul a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto;
+}
+@media only screen and (min-width: 1100px) {
+    .focal-point{
+        margin-top: 13%;
+    }
 }
 .center-logo {
 	text-align: center;
@@ -131,8 +157,19 @@ nav ul a:hover {
 	color: #525252;
 	margin-left: 20px;
 }
+@media only screen and (min-width: 1500px) {
+    .focal-text {
+        font-size: 60px;
+        transform: translateY(33px);
+    }
+}
 .focal-point img {
 	height: 150px;
+}
+@media only screen and (min-width: 1500px) {
+    .focal-point img {
+		height: 220px;
+	}
 }
 .focal-text span {
 	font-family: meshFontMedium;
@@ -147,6 +184,11 @@ nav ul a:hover {
 	padding-right: 15px;
 	color: #525252;
 }
+@media only screen and (min-width: 1500px) {
+    .focal-slogan h4 {
+        font-size: 45px;
+    }
+}
 .focal-slogan p {
 	font-family: meshFontLight;
 	text-align: center;
@@ -154,6 +196,11 @@ nav ul a:hover {
 	padding-left: 20px;
 	padding-right: 20px;
 	color: #525252;
+}
+@media only screen and (min-width: 1500px) {
+    .focal-slogan p {
+        font-size: 22px;
+    }
 }
 .down-arrow {
 	text-align: center;
@@ -205,6 +252,16 @@ nav ul a:hover {
 	font-family: meshFontLight;
 	color: #525252;
 }
+@media only screen and (min-width: 1500px) {
+    .section-two {
+        max-width: 1422px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    .category-description {
+        padding-right: 60px; 
+    }
+}
 .section-two .categories {
 	margin-top: 15px;
 }
@@ -226,6 +283,12 @@ nav ul a:hover {
     .section-two .categories div {
         flex: 1 1 0;
         text-align: center;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .section-two .categories div {
+        width: 16.6%;
     }
 }
 .section-two .categories .category:hover,
@@ -308,7 +371,13 @@ nav ul a:hover {
 	max-width: 1300px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 20px;
 	margin-top: 80px;
+}
+@media only screen and (min-width: 1500px) {
+    .section-three {
+        max-width: 1422px;
+    }
 }
 .section-three hr {
     border: none;
@@ -330,11 +399,238 @@ nav ul a:hover {
 .section-three img {
 	display: block;
 	margin: auto;
+	padding-left: 0px;
+	padding-right: 10px;
+	width: 100%; 
+	position: relative;
+}
+.section-three-description {
+	margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+/* --------- SECTION FOUR --------- */
+.section-four {
+	display: flex;
+	font-family: meshFontLight;
+	max-width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	margin-top: 80px;
+}
+@media only screen and (min-width: 1500px) {
+    .section-four {
+        max-width: 1422px;
+    }
+}
+.section-four hr {
+    border: none;
+    height: 3px;
+    width: 80px;
+    color: #F38C00; /* old IE */
+    background-color: #F38C00; /* Modern Browsers */
+}
+.section-four .fa-angle-right {
+	color: #F38C00;
+	font-size: 24px;
+	padding-left: 15px;
+	transform: translateY(2px);
+}
+.section-four .learn-more-link a {
+	text-transform: uppercase;
+	color: #F38C00;
+}
+.section-four img {
+	display: block;
+	margin: auto;
 	padding-left: 10px;
 	padding-right: 10px;
 	width: 100%; 
+	position: relative;
 }
 
+/* --------- SECTION FIVE (Testimonials) --------- */
+.section-five {
+	display: block;
+	margin: auto;
+	max-width: 1000px;
+	padding: 20px;
+	margin-top: 55px;
+	margin-bottom: 75px;
+}
+@media only screen and (min-width: 1500px) {
+    .section-five {
+        max-width: 1422px;
+    }
+}
+.section-five h4 {
+	font-family: meshFontLight;
+	margin-bottom: 30px;
+}
+.section-five .testimonial-heading p {
+	font-family: meshFontRegular;
+	max-width: 600px;
+	padding: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+.testimonial-heading {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.section-five hr {
+    border: none;
+    height: 3px;
+    width: 80px;
+    color: #0085CC; /* old IE */
+    background-color: #0085CC; /* Modern Browsers */
+}
+.card-panel img {
+	border-radius: 50%;
+	width: 100%;
+}
+.card-panel p {
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+.testimonial-statement-1 {
+	padding-left: 15px;
+	border-left: solid 3px #FFC200;
+}
+.testimonial-statement-2 {
+	padding-left: 15px;
+	border-left: solid 3px #FB6253;
+}
+.testimonial-statement-3 {
+	padding-left: 15px;
+	border-left: solid 3px #3ABF67;
+}
+
+/* --------- SECTION SIX --------- */
+.section-six {
+	display: flex;
+	font-family: meshFontLight;
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+@media only screen and (min-width: 1500px) {
+    .section-six {
+        max-width: 1422px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .section-six {
+        margin-bottom: 0px;
+    }
+}
+.section-six h4 {
+        padding-right: 20px;
+}
+.section-six p {
+        padding-right: 20px;
+}
+.description-section-six {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+.section-six hr {
+    border: none;
+    height: 3px;
+    width: 80px;
+    color: #0085CC; /* old IE */
+    background-color: #0085CC; /* Modern Browsers */
+}
+.section-six .fa-angle-right {
+	color: #0085CC;
+	font-size: 24px;
+	padding-left: 15px;
+	transform: translateY(2px);
+}
+.section-six .learn-more-link a {
+	text-transform: uppercase;
+	color: #0085CC;
+}
+
+/* --------- CONTACT FORM -------- */
+.contact-form h4 {
+	margin-left: 16px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.contact-form button {
+	margin-left: 16px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #FB6253;
+}
+.contact-form button:hover {
+	background-color: #F87D71;
+}
+/* label color */
+ .input-field label {
+   color: #000;
+ }
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: #FB6253;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid #FB6253;
+   box-shadow: 0 1px 0 0 #FB6253;
+ }
+ /* valid color */
+ .input-field input[type=text].valid {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ /* invalid color */
+ .input-field input[type=text].invalid {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ .input-field input[type=email]:focus + label {
+   color: #FB6253;
+ }
+ .input-field input[type=email]:focus {
+   border-bottom: 1px solid #FB6253;
+   box-shadow: 0 1px 0 0 #FB6253;
+ }
+ /* valid color */
+ .input-field input[type=email].valid {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ /* invalid color */
+ .input-field input[type=email].invalid {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: #000;
+}
+textarea.materialize-textarea:focus:not([readonly]) {
+	color: #FB6253;
+	border-bottom: 1px solid #FB6253;
+    box-shadow: 0 1px 0 0 #FB6253;
+}
+.input-field .prefix {
+	font-size: 22px;
+	transform: translateY(10px);
+}
+/* --------- END OF SECTION SIX --------- */
+ 
 /* --------- NEXT PAGE NAVIGATION SECTION --------- */
 .next-page-background {
 	background-color: #F7F7F7;

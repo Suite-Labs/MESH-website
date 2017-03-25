@@ -54,7 +54,7 @@ RenderSectionTwo(categories[0]);
 var ActiveCategory = 1;
 
 // Timer to loop through the categories. The second parameter determines how long between each cycle
-var LoopTimer = setInterval(LoopCategories, 3000);
+var LoopTimer = setInterval(LoopCategories, 6000);
 
 // Loops through the categories
 function LoopCategories() {
