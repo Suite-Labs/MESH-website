@@ -34,12 +34,12 @@ var Category = (function() {
 
 // Holds all the categories for section 2
 var categories = [
-    new Category('add', 'Automated Brilliance', 'Mesh integrates with your institution to automate the creation of communities that already exist naturally, whether it be a class, club, team, or department, Mesh does the heavy lifting and creates communities for you.', 'http://placehold.it/450x650/FFC200/', '#FFC200'),
-    new Category('perm_identity', 'Real Time Collaboration', 'Vestibulum vel lorem dapibus, tristique nulla et, rhoncus justo. Nunc vitae maximus ante. Pellentesque ornare sem mauris, porttitor pharetra erat placerat quis. Nunc ornare dignissim facilisis. Vestibulum a nulla laoreet.', 'http://placehold.it/450x650/0085CC/FFFFFF/', '#0085CC'),
-    new Category('info_outline', 'A new age in safety.', 'Fusce pharetra semper mi, vitae auctor turpis finibus eu. Suspendisse tempus condimentum elit. Vestibulum luctus est a tortor porttitor, a facilisis arcu tincidunt. Suspendisse volutpat justo vitae lacus luctus congue. Maecenas imperdiet dolor in diam vestibulum, sit amet mattis dolor pretium.', 'http://placehold.it/450x650/FB6253/FFFFFF/', '#FB6253'),
-    new Category('invert_colors', 'Engage. Explore. Network.', 'In hac habitasse platea dictumst. Quisque tempus mi nec massa gravida vestibulum. Fusce ipsum neque, rutrum quis fermentum in, pharetra sit amet lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'http://placehold.it/450x650/3ABF67/', '#3ABF67'),
-    new Category('input', 'Retention and Inclusion', 'Mauris et scelerisque justo. Fusce elementum ipsum ante, sed imperdiet eros euismod quis. Integer ultricies volutpat nisl a egestas. Suspendisse semper magna enim, ut bibendum massa ultrices non.', 'http://placehold.it/450x650/F38C00/', '#F38C00'),
-    new Category('label', 'Analytics', 'Fusce in enim ac lectus molestie rhoncus. Phasellus semper congue lacus, vitae gravida turpis tempus quis. Ut vestibulum commodo libero in maximus.Nulla vel rutrum augue, eget lacinia sem. Ut eros sem, vehicula vulputate hendrerit id.', 'http://placehold.it/450x650/03A9F4/FFFFFF/', '#03A9F4'),
+    new Category('add', 'Automated Brilliance', 'Mesh integrates with your institution to automate the creation of communities that already exist naturally, whether it be a class, club, team, or department, Mesh does the heavy lifting and creates communities for you.', 'img/automated-brilliance.png', '#FFC200'),
+    new Category('perm_identity', 'Real Time Collaboration', 'Vestibulum vel lorem dapibus, tristique nulla et, rhoncus justo. Nunc vitae maximus ante. Pellentesque ornare sem mauris, porttitor pharetra erat placerat quis. Nunc ornare dignissim facilisis. Vestibulum a nulla laoreet.', 'img/realtime-collaboration.png', '#0085CC'),
+    new Category('info_outline', 'A new age in safety.', 'Fusce pharetra semper mi, vitae auctor turpis finibus eu. Suspendisse tempus condimentum elit. Vestibulum luctus est a tortor porttitor, a facilisis arcu tincidunt. Suspendisse volutpat justo vitae lacus luctus congue. Maecenas imperdiet dolor in diam vestibulum, sit amet mattis dolor pretium.', 'img/safety-placeholder.png', '#FB6253'),
+    new Category('invert_colors', 'Engage. Explore. Network.', 'In hac habitasse platea dictumst. Quisque tempus mi nec massa gravida vestibulum. Fusce ipsum neque, rutrum quis fermentum in, pharetra sit amet lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'img/engage-explore.png', '#3ABF67'),
+    new Category('input', 'Retention and Inclusion', 'Mauris et scelerisque justo. Fusce elementum ipsum ante, sed imperdiet eros euismod quis. Integer ultricies volutpat nisl a egestas. Suspendisse semper magna enim, ut bibendum massa ultrices non.', 'img/retention-inclusion.png', '#F38C00'),
+    new Category('label', 'Analytics', 'Fusce in enim ac lectus molestie rhoncus. Phasellus semper congue lacus, vitae gravida turpis tempus quis. Ut vestibulum commodo libero in maximus.Nulla vel rutrum augue, eget lacinia sem. Ut eros sem, vehicula vulputate hendrerit id.', 'img/safety-placeholder.png', '#03A9F4'),
 ];
 
 // Populate the category icons on the left. Dynamic based on how many categories you have.
@@ -67,7 +67,7 @@ function LoopCategories() {
 }
 
 // Cancels the timer
-function abortTimer() { // to be called when you want to stop the timer
+function abortTimer() {
   clearInterval(LoopTimer);
 }
 
@@ -108,9 +108,14 @@ function RenderSectionTwo(category) {
     $('.category-learn-more-btn').fadeOut(speed, function () {
         $(this).css('color', category.color).fadeIn(speed);
     });
+
+    $('.category-img').attr('src', category.img);
+    $('.category-img').addClass('active-img');
+    setTimeout(function(){
+        $('.category-img').removeClass('active-img');
+    }, 500);
     //$('.category-header').html(category.header);
     //$('.category-description').html(category.description);
-    $('.category-img').attr('src', category.img);
     //$('.category-hr').css('background-color', category.color);
     //$('.category-learn-more-btn').css('color', category.color);
 }

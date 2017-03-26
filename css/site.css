@@ -293,7 +293,7 @@ nav ul a:hover {
 }
 .section-two .categories .category:hover,
     .section-two .categories .category.active {
-        transform: scale(.8);
+        transform: scale(.9);
         opacity: 1;
         cursor: pointer;
     }
@@ -304,20 +304,19 @@ nav ul a:hover {
     color: #F38C00; /* old IE */
     background-color: #F38C00; /* Modern Browsers */
 }
-.section-two img {
+.section-two .category-img {
 	display: block;
 	margin: auto;
-	padding-left: 10px;
-	padding-right: 10px;
 	width: 100%; 
 	position: relative;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 
 /* WORKING ON THIS */
 .active-img {
 	margin-left: 50;
-	animation: slideIn .3s;
-	-webkit-animation: slideIn .3s;
+	animation: slideIn .5s;
+	-webkit-animation: slideIn .5s;
 }
 @keyframes slideIn {
 	from {
