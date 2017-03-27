@@ -242,7 +242,7 @@ nav ul a:hover {
 
 /* --------- SECTION TWO --------- */
 .section-two {
-	display: block;
+	display: flex;
 	position: relative;
 	margin: auto;
 	width: 100%;
@@ -251,6 +251,7 @@ nav ul a:hover {
 	max-width: 1000px;
 	font-family: meshFontLight;
 	color: #525252;
+	
 }
 @media only screen and (min-width: 1500px) {
     .section-two {
@@ -264,11 +265,37 @@ nav ul a:hover {
 }
 .section-two .categories {
 	margin-top: 15px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: space-between;
+	
+}
+@media only screen and (max-width: 600px) {
+    .categories {
+    	flex-direction: row;
+    }
+}
+.category {
+	flex: 1;
+}
+.section-two .category-content {
+	flex: 5;
+	padding-right: 50px;
+}
+.section-two .category-img-wrapper {
+	flex: 7;
+}
+@media only screen and (max-width: 600px) {
+    .category-content {
+    	margin-top: 15px;
+        margin-bottom: 35px;
+        padding-left: 10.5px;
+    }
 }
 /* Change this when flex comes */
 .section-two .categories .category {
-	padding: 10px;
-	padding-bottom: 15px;
 	opacity: .7;
 	cursor: pointer;
 	transition: all .5s;
@@ -312,7 +339,7 @@ nav ul a:hover {
 	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 
-/* WORKING ON THIS */
+/* Animation for section two image slide in */
 .active-img {
 	margin-left: 50;
 	animation: slideIn .5s;
@@ -332,13 +359,6 @@ nav ul a:hover {
 .section-two .learn-more-link a {
 	text-transform: uppercase;
 	color: #F38C00;
-}
-@media only screen and (max-width: 600px) {
-    .section-two-description {
-    	margin-top: 15px;
-        margin-bottom: 35px;
-        padding-left: 10.5px;
-    }
 }
 .section-two .fa-angle-right {
 	/*color: #F38C00;*/
@@ -378,33 +398,42 @@ nav ul a:hover {
         max-width: 1422px;
     }
 }
+@media only screen and (max-width: 600px) {
+    .section-three {
+    	margin-top: 40px;
+    }
+}
 .section-three hr {
     border: none;
     height: 3px;
     width: 80px;
-    color: #0085CC; /* old IE */
-    background-color: #0085CC; /* Modern Browsers */
+    color: #3ABF67; /* old IE */
+    background-color: #3ABF67; /* Modern Browsers */
+}
+@media only screen and (max-width: 600px) {
+    .section-three h4 {
+		margin-top: 35px;
+	}
 }
 .section-three .fa-angle-right {
-	color: #0085CC;
+	color: #3ABF67;
 	font-size: 24px;
 	padding-left: 15px;
 	transform: translateY(2px);
 }
 .section-three .learn-more-link a {
 	text-transform: uppercase;
-	color: #0085CC;
+	color: #3ABF67;
 }
 .section-three img {
 	display: block;
 	margin: auto;
-	padding-left: 0px;
-	padding-right: 10px;
 	width: 100%; 
 	position: relative;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 .section-three-description {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
     padding-left: 20px;
 }
 
@@ -421,6 +450,12 @@ nav ul a:hover {
 @media only screen and (min-width: 1500px) {
     .section-four {
         max-width: 1422px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .section-four {
+        margin-bottom: 35px; 
+        margin-top: 35px;
     }
 }
 .section-four hr {
@@ -440,6 +475,11 @@ nav ul a:hover {
 	text-transform: uppercase;
 	color: #F38C00;
 }
+@media only screen and (max-width: 600px) {
+    .section-four-description {
+		margin-bottom: 35px;
+	}
+}
 .section-four img {
 	display: block;
 	margin: auto;
@@ -447,6 +487,7 @@ nav ul a:hover {
 	padding-right: 10px;
 	width: 100%; 
 	position: relative;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 
 /* --------- SECTION FIVE (Testimonials) --------- */
@@ -463,12 +504,18 @@ nav ul a:hover {
         max-width: 1422px;
     }
 }
+@media only screen and (max-width: 600px) {
+    .section-five {
+        margin-bottom: 20px; 
+        margin-top: 25px;
+    }
+}
 .section-five h4 {
 	font-family: meshFontLight;
 	margin-bottom: 30px;
 }
 .section-five .testimonial-heading p {
-	font-family: meshFontRegular;
+	font-family: meshFontLight;
 	max-width: 600px;
 	padding: 15px;
 	display: block;
@@ -530,6 +577,7 @@ nav ul a:hover {
 @media only screen and (max-width: 600px) {
     .section-six {
         margin-bottom: 0px;
+        margin-top: 15px;
     }
 }
 .section-six h4 {
@@ -541,6 +589,12 @@ nav ul a:hover {
 .description-section-six {
     margin-bottom: 30px;
     padding-left: 20px;
+    margin-top: 28px;
+}
+@media only screen and (max-width: 600px) {
+    .description-section-six {
+        margin-top: 0px;
+    }
 }
 .section-six hr {
     border: none;
