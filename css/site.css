@@ -398,32 +398,22 @@ nav ul a:hover {
         max-width: 1422px;
     }
 }
-@media only screen and (max-width: 600px) {
-    .section-three {
-    	margin-top: 40px;
-    }
-}
 .section-three hr {
     border: none;
     height: 3px;
     width: 80px;
-    color: #3ABF67; /* old IE */
-    background-color: #3ABF67; /* Modern Browsers */
-}
-@media only screen and (max-width: 600px) {
-    .section-three h4 {
-		margin-top: 35px;
-	}
+    color: #0085CC; /* old IE */
+    background-color: #0085CC; /* Modern Browsers */
 }
 .section-three .fa-angle-right {
-	color: #3ABF67;
+	color: #0085CC;
 	font-size: 24px;
 	padding-left: 15px;
 	transform: translateY(2px);
 }
 .section-three .learn-more-link a {
 	text-transform: uppercase;
-	color: #3ABF67;
+	color: #0085CC;
 }
 .section-three img {
 	display: block;
@@ -433,7 +423,7 @@ nav ul a:hover {
 	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 .section-three-description {
-	margin-bottom: 15px;
+	margin-bottom: 30px;
     padding-left: 20px;
 }
 
@@ -450,12 +440,6 @@ nav ul a:hover {
 @media only screen and (min-width: 1500px) {
     .section-four {
         max-width: 1422px;
-    }
-}
-@media only screen and (max-width: 600px) {
-    .section-four {
-        margin-bottom: 35px; 
-        margin-top: 35px;
     }
 }
 .section-four hr {
@@ -475,11 +459,6 @@ nav ul a:hover {
 	text-transform: uppercase;
 	color: #F38C00;
 }
-@media only screen and (max-width: 600px) {
-    .section-four-description {
-		margin-bottom: 35px;
-	}
-}
 .section-four img {
 	display: block;
 	margin: auto;
@@ -487,7 +466,6 @@ nav ul a:hover {
 	padding-right: 10px;
 	width: 100%; 
 	position: relative;
-	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 
 /* --------- SECTION FIVE (Testimonials) --------- */
@@ -504,18 +482,12 @@ nav ul a:hover {
         max-width: 1422px;
     }
 }
-@media only screen and (max-width: 600px) {
-    .section-five {
-        margin-bottom: 20px; 
-        margin-top: 25px;
-    }
-}
 .section-five h4 {
 	font-family: meshFontLight;
 	margin-bottom: 30px;
 }
 .section-five .testimonial-heading p {
-	font-family: meshFontLight;
+	font-family: meshFontRegular;
 	max-width: 600px;
 	padding: 15px;
 	display: block;
@@ -577,7 +549,6 @@ nav ul a:hover {
 @media only screen and (max-width: 600px) {
     .section-six {
         margin-bottom: 0px;
-        margin-top: 15px;
     }
 }
 .section-six h4 {
@@ -589,12 +560,6 @@ nav ul a:hover {
 .description-section-six {
     margin-bottom: 30px;
     padding-left: 20px;
-    margin-top: 28px;
-}
-@media only screen and (max-width: 600px) {
-    .description-section-six {
-        margin-top: 0px;
-    }
 }
 .section-six hr {
     border: none;
